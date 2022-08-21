@@ -9,6 +9,8 @@
     I also used Webpack for the packaging, development and construction of my project.
     This project includes: scss, css, dart scss, js, react + useState. git.
 
+    You need install Node to run this proyect  < v18.4.0
+
 # Scripts:
 
     npm i / npm install  -> Install libraries in .json
