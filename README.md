@@ -16,4 +16,9 @@
     npm i / npm install  -> Install libraries in .json
     
     npm start -> run the development mode.
-    npm build -> build the proyect.
+    npm build -> build the proyect. folder -> dist
+
+# Branches:
+
+    - Master
+    - Main (me)
