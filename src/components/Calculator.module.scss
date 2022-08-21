@@ -1,0 +1,50 @@
+@import '../styles/variables.scss';
+
+.container {
+    padding: 2vh 4vw;
+    background-color: rgb(62, 74, 181);
+}
+
+.inputVal {
+    width: 35%;
+    margin: 10px 0px;
+}
+
+.container_operator {
+    width: 35%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.container_operators {
+    margin: 2vh 0;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.operator {
+    border-radius: 50%;
+    border: 3px solid black;
+    width: 38px;
+    padding: 3px 8px 8px 8px;
+    margin: 0;
+    font-weight: bolder;
+    text-align: center;
+    cursor: pointer;
+}
+
+.operator_active {
+    background-color: $butStyBg_act;
+}
+
+.operator:hover {
+    transition: .2s;
+    background-color: $butStyBg_act;
+}
+
+

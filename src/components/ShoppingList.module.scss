@@ -1,0 +1,35 @@
+@import '../styles/variables.scss';
+
+.container {
+    padding: 2vh 4vw;
+    background-color: $bg3;
+}
+
+.container2 {
+    article {
+        margin-top: 0.5em;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5em;
+        p {
+            margin: 0.2em 0;
+        }
+    }
+}
+
+.inputs {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    font-size: 0.85em;
+    height: auto;
+    button {
+        font-size: 1em;
+    }
+}
+
+.deleteError {
+    color: red;
+}
+
