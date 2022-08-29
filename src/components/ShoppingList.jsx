@@ -7,10 +7,14 @@ export const ShoppingList = (props) => {
     const [item, setItem] = useState("");
     const [listItems, setListItems] = useState([]);
     const [deleteError, setDeleteError] = useState(false);
-
-    const inpArticle = ({target}) => {
+    
+    const inpHandleChangue = ({target}) => {
         let {value} = target;
         setItem(value);
+    }
+
+    const inpHandleClick = () => {
+        setDeleteError(false);
     }
 
     const butAdd = () => {
@@ -19,13 +23,16 @@ export const ShoppingList = (props) => {
             id: newId < 10 ? '0' + newId : newId,
             name: item,
         }]);
+        setDeleteError(false);
     }
 
     const butDeleteItemsWithName = () => {
-        !deleteError && setDeleteError(true);
-
-        for (let index = 0; index < listItems.length && deleteError; index++) {
-            (listItems[index] !== item) && setDeleteError(false);
+        setDeleteError(true)
+        let aux = true;
+        for (let index = 0; index < listItems.length && aux; index++) {
+            if(listItems[index].name == item){
+                setDeleteError(false)
+            }
         }
 
         !deleteError && setListItems(listItems.filter(elm => elm.name != item));
@@ -41,7 +48,7 @@ export const ShoppingList = (props) => {
                 <h2>{props.name}</h2>
                 <hr />
                 <article className={styles.inputs}>
-                    <input type="text" onChange={event => inpArticle(event)}/>
+                    <input type="text" onClick={()=>inpHandleClick()} onChange={event => inpHandleChangue(event)}/>
                     <button onClick={() => butAdd()}>Add product</button>
                     <button onClick={() => butDeleteItemsWithName()}>Delete products</button>
                     {
